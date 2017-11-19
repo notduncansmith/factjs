@@ -2,6 +2,10 @@
 
 Fact.js is a code orchestration library that makes it easier to write maintainable Javascript. It is a straightforward port of the [Factfold Clojure library](https://github.com/notduncansmith/factfold).
 
+```
+npm install factfold
+```
+
 ## How does it work
 
 From the Factfold README:
@@ -14,15 +18,17 @@ In the reference implementation, the state object (like most Clojure data struct
 
 ## Usage
 
-Fact.js exports a single function, `evaluate`. This function takes the model, the current model state, and the new datum as input.
+Fact.js exports a single function, `evaluate`. This function takes the model, the current model state, and the new datum as arguments.
 
 ```js
 const helloModel = [
   {greeting: (s, f) => (f.subject ? `Hello, ${f.subject}!` : s.greeting)},
 ];
 
-JSON.stringify(evaluate(helloModel, {}, {subject: 'world'})) == '{"greeting":"Hello, world!"}'
+evaluate(helloModel, {}, {subject: 'world'}).greeting == "Hello, world!"
 ```
+
+The current implementation is not concurrent, since there are a number of evaluation strategies available and the right one changes depending on context. As implementations of these become available, they can be standardized and assimilated.
 
 ## License
 
