@@ -1,4 +1,4 @@
-# Fact.js - Flexible and correctness-prone process composition, now in Javascript!
+# Fact.js
 
 Fact.js is a code orchestration library that makes it easier to write maintainable Javascript. It is a straightforward port of the [Factfold Clojure library](https://github.com/notduncansmith/factfold).
 
