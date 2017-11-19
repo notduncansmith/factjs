@@ -1,0 +1,11 @@
+{
+  "name": "factjs",
+  "description": "Flexible and correctness-prone process composition, now in Javascript",
+  "version": "1.0.0",
+  "author": "Duncan Smith",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "license": "Eclipse Public License"
+}
