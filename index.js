@@ -7,7 +7,7 @@ function evaluate(model, state, fact) {
         return evaluate(props[key], orderVals[key], fact);
       }
 
-      vals[key] = props[key](orderVals, fact);
+      vals[key] = props[key].call(orderVals[key], orderVals, fact);
 
       return vals;
     }, orderVals);
